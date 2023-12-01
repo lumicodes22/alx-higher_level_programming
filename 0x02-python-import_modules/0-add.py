@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
     from add_0 import add
-#assign value to variable a and b
+# assign value to variable a and b
 
     a = 1
     b = 2
