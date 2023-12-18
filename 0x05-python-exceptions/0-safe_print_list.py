@@ -9,6 +9,6 @@ def safe_print_list(my_list=[], x=0):
         except IndexError:
             print("index error occured")
             break
-        number +=i 1
+        number += 1
     print("")
     return number
