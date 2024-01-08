@@ -1,34 +1,17 @@
 #!/usr/bin/python3
-
-"""
-This module contains a class that create a square by
-inheriting the class Rectangle
-"""
-
+"""Defines a Rectangle subclass Square."""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """This class creates a square by inheriting
-    class Rectangle
+    """Represent a square."""
 
-    Attributes:
-        __init__(self): Initializes the object
-        size: Size of the square
-    """
     def __init__(self, size):
-        """This initializes the instance with the number of
-        arguments in the base class Rectangle
+        """Initialize a new square.
 
-        size: Size of the square
+        Args:
+            size (int): The size of the new square.
         """
         self.integer_validator("size", size)
-        Rectangle.__init__(self, size, size)
+        super().__init__(size, size)
         self.__size = size
-
-    def __str__(self):
-        """Return the string format of the object so it over-write
-        the super or the base class str format
-        """
-        return "[{}] {}/{}".format(
-                self.__class__.__name__, self.__size, self.__size)
